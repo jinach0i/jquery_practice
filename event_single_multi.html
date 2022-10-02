@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 등록 연습</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="red_font_btn">글자색 빨강화</button></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsam iure in perspiciatis nihil laudantium accusantium numquam et magni non? Consequatur error placeat porro sapiente, ipsa totam nihil voluptatibus ullam.</p>
+        <p><button class="black_font_btn">글자색 검정으로</button></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iusto aliquam optio sapiente aperiam modi ipsam odit, saepe aspernatur, non laudantium ea quasi culpa eum inventore eius dolorum, nostrum dolore.</p>
+    </div>
+    <script>
+        $('.red_font_btn').click(function () { 
+            $('.red_font_btn').parent().next().css({"color":"red"})
+        });
+        $('.black_font_btn').hover(function () {
+                // over
+                $('.black_font_btn').parent().next().css({"color":"grey"})
+            }, function () {
+                // out
+                $('.black_font_btn').parent().next().css({"color":"black"})
+
+            }
+        );
+    </script>
+</body>
+</html>
